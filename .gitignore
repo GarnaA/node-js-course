@@ -25,5 +25,8 @@
 
 node_modules/
 
+.env
+
+prisma/*.db
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
