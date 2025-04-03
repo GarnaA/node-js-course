@@ -1,8 +1,7 @@
 import {Router} from 'express'
-import { body, oneOf, validationResult } from "express-validator"
+import { body } from "express-validator"
 import { handleInputErrors } from './modules/middleware'
 import { createProduct, deleteProduct, getOneProduct, getProducts } from './handlers/product'
-import { create } from 'domain'
 import { createUpdate, deleteUpdate, getOneUpdate, getUpdates, updateUpdate } from './handlers/update'
 
 const router = Router()
@@ -38,9 +37,9 @@ router.delete('/update/:id', deleteUpdate)
 router.get('/updatepiont', () => {})
 router.get('/updatepiont/:id', () => {})
 router.put('/updatepiont/:id',
-    body('name').optional().isString(), 
-    body('description').optional().isString(), 
-    () => {}
+  body('name').optional().isString(), 
+  body('description').optional().isString(), 
+  () => {}
 )
 router.post('/updatepiont',   
   body('name').optional().isString(), 
